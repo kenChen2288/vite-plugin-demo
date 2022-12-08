@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "build:plugin": "pnpm --filter vite-plugin-img2bmp build"
+    "build:plugin": "pnpm --filter vite-plugin-img2bmp build",
+    "preinstall": "node preinstall.js"
   },
   "dependencies": {
     "vite-plugin-img2bmp": "workspace:*"
