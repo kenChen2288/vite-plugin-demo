@@ -1,0 +1,42 @@
+{
+  "name": "vite-plugin-img2bmp",
+  "version": "0.0.1",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./*": "./*"
+  },
+  "typesVersions": {
+    "*": {
+      "index": [
+        "dist/index.d.ts"
+      ]
+    }
+  },
+  "main": "dist/index.ts",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsup-node ./src/index.ts --watch --format esm,cjs",
+    "build": "tsup-node ./src/index.ts --dts --format cjs,esm --no-splitting"
+  },
+  "dependencies": {
+    "jimp": "^0.16.2",
+    "magic-string": "^0.25.7",
+    "rollup": "^2.68.0"
+  },
+  "devDependencies": {
+    "@rollup/pluginutils": "^4.2.1",
+    "svelte": "^3.54.0",
+    "tsup": "^5.12.9",
+    "typescript": "^4.9.3"
+  },
+  "files": [
+    "dist",
+    "client.d.ts"
+  ]
+}
